@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int count = 1;              // 1. initialization
+
+    while (count <= 1) {        // 2. condition
+        printf("  *\n");
+        printf(" ***\n");
+        printf("*****\n");
+        printf(" ***\n");
+        printf("  *\n");
+        count++;                // 3. update
+    }
+
+    printf("\n");
+    return 0;
+}
