@@ -1,13 +1,20 @@
 #include <stdio.h>
 
 int main() {
-    int count = 1;              // 1. initialization
+    int row = 1;
+    int count;
 
-    while (count <= 4) {        // 2. condition
-        printf("****\n");
-        count++;                // 3. update
+    while (row <= 4) {
+        count = 1;
+
+        while (count <= 4) {
+            printf("* ");
+            count++;
+        }
+
+        printf("\n");
+        row++;
     }
 
-    printf("\n");
     return 0;
 }
