@@ -1,17 +1,32 @@
 #include <stdio.h>
 
 int main() {
-    int count = 1;              // 1. initialization
+    int row = 1;
+    int spaces, stars;
 
-    while (count <= 1) {        // 2. condition
-        printf("  *\n");
-        printf(" ***\n");
-        printf("*****\n");
-        printf(" ***\n");
-        printf("  *\n");
-        count++;                // 3. update
+    while (row <= 5) {
+
+        if (row <= 2) {
+            spaces = 2 - row + 1;
+            stars = row * 2 - 1;
+        } else {
+            spaces = row - 3;
+            stars = (6 - row) * 2 - 1;
+        }
+
+        while (spaces > 0) {
+            printf(" ");
+            spaces--;
+        }
+
+        while (stars > 0) {
+            printf("*");
+            stars--;
+        }
+
+        printf("\n");
+        row++;
     }
 
-    printf("\n");
     return 0;
 }
